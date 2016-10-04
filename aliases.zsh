@@ -29,3 +29,5 @@ alias refresh='source ~/.zshrc'
 alias sshcp='ssh-copy-id'
 alias zshconfig='vim ~/.zshrc'
 alias github='https://github.com'
+
+export github=https://github.com

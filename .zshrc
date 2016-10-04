@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="lambda-mod"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -84,8 +84,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+powerline-daemon -q
+
 # Set personal dotfiles location
-export PREFS=archerbandito/dotfiles
+export PREFS=/Users/jros/archerbandito/dotfiles
+
+# Powerline location
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Source personal dotfiles
 source $PREFS/aliases.zsh
