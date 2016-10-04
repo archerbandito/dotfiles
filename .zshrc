@@ -1,12 +1,13 @@
-# If you come from bash you might have to change your $PATH.  # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jros/.oh-my-zsh
+  export ZSH=/Users/jros/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
+ZSH_THEME="lambda-mod"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -31,7 +32,7 @@ ZSH_THEME="ys"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -50,37 +51,23 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime nmap vi-mode)
+plugins=(git vi-mode ruby tmux osx sublime brew)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Powerline
-#source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-
-# Source our variables
-source $ZSH/custom/env.zsh
-
-# Source our $PATH
-source $ZSH/custom/path.zsh
-
-# Source our aliases
-source $ZSH/custom/aliases.zsh 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-#if [[ -n $SSH_CONNECTION ]]; then
-#  export EDITOR='vim'
-#else
-#  export EDITOR='mvim'
-#fi
-
-export EDITOR="vim"
-#bindkey -v
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -97,5 +84,10 @@ export EDITOR="vim"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Set personal dotfiles location
+export PREFS=archerbandito/dotfiles
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# Source personal dotfiles
+source $PREFS/aliases.zsh
+source $PREFS/path.zsh
+source $PREFS/env.zsh
